@@ -1,4 +1,6 @@
 from datetime import datetime
+from colorama import init
+init()
 def time123():
     current_datetime = datetime.now()
     print(current_datetime)
