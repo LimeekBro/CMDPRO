@@ -1,3 +1,7 @@
+from datetime import datetime
+def time123():
+    current_datetime = datetime.now()
+    print(current_datetime)
 def ip():
     import requests
     import time
@@ -235,6 +239,8 @@ while m:
         ddos_attack()
     elif cmd == 'exit':
         m = 0
+        d = datetime.now()
+        print('Дата завершения: ' + str(d))
     elif cmd == 'cls' or cmd == 'clear':
         import os
 
@@ -248,7 +254,7 @@ while m:
         else:
             os.system(cmd1)
     elif cmd.startswith("open"):
-        if cmd.endswith("com") or cmd.endswith("ua") or cmd.endswith("ru") or cmd.endswith("org"):
+        if cmd.endswith("com") or cmd.endswith("ua") or cmd.endswith("ru") or cmd.endswith("org") or cmd.endswith("net") or cmd.split()[1].strip() == 'https':
             import webbrowser
 
             words = cmd.split(' ')
@@ -265,7 +271,7 @@ while m:
             import os
 
             words = cmd.split(' ')
-            fragment = 'пере'
+            fragment = '$$$$$$$$'
             new_words = []
             for word in words:
                 if fragment not in word:
@@ -274,6 +280,13 @@ while m:
             ' '.join(new_words)
             os.startfile(word)
     elif cmd == 'iplogger':
+        poi = input('Показать инструкцию по использованию [Y/n]')
+        if poi == 'y':
+            print('Сейчас вас перебросит на сайт\n''У вас появится поле и 2 кнопки (Create a shortlink) и (Its a tracking code)\nТак же у вас есть поле, в него вы должны выбрать куда будет вести ссылка\nДалее нажимаем на кнопку (Create a shortlink)\nПосле чего вы должны принять условия использования\nПараметры Collect SMART data и Forward GET parameters нужно включить\nДалее мы выдим ссылки, нам нужна Its your logger link\n!Так же скопируйте Link for access to statistics для себя\nПо необходимости настраиваем её\nТеперь скидываем эту ссылку жертве\n Как только он(а) зайдёт вы переходите по вашей ссылке Link for access to statistics\nПереходим в пункт visitors ниже, и смотрим айпи')
+            zxc = input('Введите любой символ чтобы продолжить')
+        else:
+            print(null = '')
+            #ds
         import os
         import webbrowser
 
@@ -281,5 +294,7 @@ while m:
         webbrowser.open(word, new=1, autoraise=True)
     elif cmd == 'hacksimulation':
         hacksim()
+    elif cmd == 'time':
+        time123()
     else:
         print(Fore.RED + 'Error: command ' + Fore.GREEN + '"' + cmd + '"' + Fore.RED + ' not found')
