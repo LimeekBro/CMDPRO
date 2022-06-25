@@ -1,13 +1,43 @@
+import time
+import os
 t1 = input
 t2 = print
-
+cm1 = '$ ---'
+offest1 = 'cls||clear'
+try:
+    f = open('DontDelereThisFilePython.txt')
+    f.close()
+    t2('Так как файлы модулей имеются ничего устанавливатся не будет\n[P.S] Если произойдёт ошибка попробуйте удалить файл DontDelereThisFilePython.txt')
+except FileNotFoundError:
+    t2('У вас не установлены модули!')
+    time.sleep(3)
+    t2('installed 1/7')
+    time.sleep(0.09)
+    os.system('pip install colorama --quiet --disable-pip-version-check')
+    t2('installed 2/7')
+    os.system('pip install json --quiet --disable-pip-version-check')
+    t2('installed 3/7')
+    os.system('pip install requests --quiet --disable-pip-version-check')
+    t2('installed 4/7')
+    os.system('pip install requests --quiet --disable-pip-version-check')
+    t2('installed 5/7')
+    os.system('pip install get_ip --quiet --disable-pip-version-check')
+    t2('installed 6/7')
+    os.system('pip install os --quiet --disable-pip-version-check')
+    t2('installed 7/7')
+    
+    my_file = open("DontDelereThisFilePython.py", "w+")
+    my_file.write('#Удалив данный файл установка модулей начнётся с нуля, Hackersoft')
+    t2("Был создан файл DontDelereThisFilePython.txt, \nне удаляйте его ато установка начнётся заного")
+    my_file.close()
 try:  
     from datetime import datetime
     from colorama import init
     import requests 
     import time 
+    import os
     import random
-    global get_ip 
+    os.system(offest1)
     init()
     response = requests.get(f'http://ipinfo.io/json' )
     user_country = response.json()[ 'country' ] 
@@ -24,8 +54,7 @@ try:
             import requests 
             import time 
             import random 
-            global get_ip 
-            get_ip = t1('[+] IP > > > ') 
+            get_ip = t1('[+] IP $ ---  ') 
             def load(): 
                 m = 0 
                 q = random.randint(1,6) 
@@ -45,26 +74,13 @@ try:
                 user_location = response.json()[ 'loc' ]  
                 user_org = response.json()[ 'org' ]  
                 user_timezone = response.json()[ 'timezone' ] 
-                global all_info 
-                all_info = f'Fore.RED + \n<Info>\nIP : { user_ip }\nСити : { user_city }\nРегион : { user_region }\nСтрана : { user_country }\nЛокация : { user_location }\nОгранизация : { user_org }\nЗона : { user_timezone }' 
-                t2( all_info ) 
-            def record(): 
-                user_record = '\n[?] Сохранить в текстовом документе? (д/н): ' 
-                if user_record == 'д':  
-                    g = random.randint(0,10000) 
-                    file = open( 'ip_data'+str(g)+'.txt', 'a' ) #вся инфа в файле ip.txt 
-                    file.write( f'{ all_info }\n' ) 
-                    t2(g + str(' --- Номер подписи файла'))
-                    file.close() 
-                elif user_record == 'н':  
-                    t2( '\n<O.K>' ) 
-                else:
-                    t2('\r')
+                all_info = Fore.RED + f'\n<Info>\nIP : { user_ip }\nСити : { user_city }\nРегион : { user_region }\nСтрана : { user_country }\nЛокация : { user_location }\nОгранизация : { user_org }\nЗона : { user_timezone }' 
+                t2( all_info )  
             def main():  
                 info() 
-                record() 
+                
             main()
-            t2('Данная функция ещё не доработана')
+            t2('$ -- Данная функция ещё не доработана')
         def numinfo():
             t2('It`s command dont work...')
         def ddos_attack():
@@ -168,7 +184,7 @@ try:
                         if qdk <= 10:
                             qdk = qdk + 1
                         else:
-                            os.system('cls||clear')
+                            os.system(offest1)
                             qdk = 0
 
 
@@ -191,7 +207,7 @@ try:
                         if qdk <= 10:
                             qdk = qdk + 1
                         else:
-                            os.system('cls||clear')
+                            os.system(offest1)
                             qdk = 0
             except:
                 t2(Fore.RED + 'Произошла непредвиденная ошибка, скорее всего вы ввели строковое значение вместо числового.')
@@ -203,40 +219,7 @@ try:
         from colorama import Style
         import time
         init(autoreset=True)
-        try:
-            f = open('DontDelereThisFilePython.txt')
-            f.close()
-            t2('Так как файлы модулей имуются ничего устанавливатся не будет\n[P.S] Если произойдёт ошибка попробуйте удалить файл DontDelereThisFilePython.txt')
-        except FileNotFoundError:
-            t2('У вас не установлены модули!')
-            time.sleep(3)
-            t2('installed 1/7')
-            time.sleep(0.09)
-            os.system('cls||clear')
-            os.system('pip install colorama')
-            t2('installed 2/7')
-            os.system('cls||clear')
-            os.system('pip install json')
-            t2('installed 3/7')
-            os.system('cls||clear')
-            os.system('pip install requests')
-            t2('installed 4/7')
-            os.system('cls||clear')
-            os.system('pip install urllib.request')
-            t2('installed 5/7')
-            os.system('cls||clear')
-            os.system('pip install get_ip')
-            t2('installed 6/7')
-            os.system('cls||clear')
-            os.system('pip install os')
-            t2('installed 7/7')
-            os.system('cls||clear')
-            os.system('cls||clear')
-            
-            my_file = open("DontDelereThisFilePython.txt", "w+")
-            my_file.write('Удалив данный файл установка модулей начнётся с нуля')
-            t2("Был создан файл DontDelereThisFilePython.txt, \nне удаляйте его ато установка начнётся заного")
-            my_file.close()
+        
         version = '5.0 [F1]'
         d = Fore.GREEN + '―'
         cl = Fore.WHITE
@@ -354,20 +337,21 @@ try:
             t2(Fore.BLUE + '\r[Loaded, connecting to Hacking libery]')
             time.sleep(2)
         loading()
-        passchek = t1('Введите пароль [?] > > > ')
-        os.system('cls||clear')
+        passchek = t1('Введите пароль [?] $ ---  ')
+        os.system(offest1)
 
         m = 1
         if passchek == '66572986':
             t2(Fore.LIGHTCYAN_EX + 'Hacker Soft\nVersion: ' + str(version) + '\nMeade by Limeek             Telegram: @L1meek')
+            
             while m:
-                g = '$ --- '
+                g = cm1
                 cmd = t1(Fore.BLUE + str(g))
                 if cmd == 'ip' or cmd == 'getip' or cmd == 'iphack':
                     ip()
                 elif cmd == 'github':
                     t2('Данный проект на github\n[+] -- https://github.com/LimeekBro/CMDPRO -- [+]')
-                elif cmd == 't2':
+                elif cmd == 'print':
                     pr1nt()
                 elif cmd == 'numinfo' or cmd == 'ninfo' or cmd == 'nuberhack' or cmd == 'phoneinfo':
                     numinfo()
@@ -377,10 +361,10 @@ try:
                     m = 0
                 elif cmd == 'cls' or cmd == 'clear':
                     import os
-                    os.system('cls||clear')
+                    os.system(offest1)
                 elif cmd == 'os':
                     try:
-                        cmd1 = t1(Fore.YELLOW + 'Введите команду > > >')
+                        cmd1 = t1(Fore.YELLOW + 'Введите команду $ --- ')
                         if cmd1 == 'python':
                             t2('Нельзя вызвать пайтон в пайтоне!')
                         elif cmd1 == 'cmd':
@@ -388,7 +372,7 @@ try:
                         else:
                             os.system(cmd1)
                     except:
-                        t2('Error [' + Fore.RED + '!' + Fore.WHITE + '] +' + Fore.RED + ' Вы ввели недопустимую команду!')
+                        t2('Error [' + Fore.RED + cm1 + Fore.WHITE + '] +' + Fore.RED + ' Вы ввели недопустимую команду!')
                 elif cmd.startswith("open"):
                     if cmd.endswith("com") or cmd.endswith("ua") or cmd.endswith("ru") or cmd.endswith("org"):
                         import webbrowser
@@ -400,26 +384,29 @@ try:
                                  new_words.append(word)
                         new_words
                         ' '.join(new_words)
-
                         webbrowser.open(word, new=1, autoraise=True)
                     if cmd.endswith(".py"):
-                        import os
-                        words = cmd.split(' ')
-                        fragment = 'пере'
-                        new_words = []
-                        for word in words:
-                             if fragment not in word:
-                                 new_words.append(word)
-                        new_words
-                        ' '.join(new_words)
-                        os.startfile(word)
+                        try:
+                            import os
+                            words = cmd.split(' ')
+                            fragment = 'пере'
+                            new_words = []
+                            for word in words:
+                                 if fragment not in word:
+                                     new_words.append(word)
+                            new_words
+                            ' '.join(new_words)
+                            os.startfile(word)
+                        except FileNotFoundError:
+                            t2('Error: Файл не обнаружен $ --')
+                        except:
+                            t2('Error: Файл не удалось открыть $ --')
                 elif cmd == 'iplogger':
                         import os
                         import webbrowser
                         word = 'https://iplogger.org'
                         webbrowser.open(word, new=1, autoraise=True)
                 elif cmd == 'help':
-
                     t2('Данная программа постоянно будет обновлятся на github,\nтак как программа является хакерской она будет доступна только в регионах UA\nПароль сообщается только девереным лицам, а шифр убрать невозможно!')
                     help1 = t1('Хотите получить список коданд [y/n]')
                     if help1 == 'y':
@@ -433,11 +420,16 @@ try:
                     else:
                         t2('Так как у вас нету termux(Вы можете его скачать)\nДля того чтобы использовать pydroid\nВам понадобится вручную скачать файл main.py по ссылке https://github.com/LimeekBro/CMDPRO\nПотом запустить его через pydroid')
                 elif cmd == 'update':
-                    t2('    --Обновление--\nОптимизация размера кода\n  Новая команда update\n  Обновлено сообщение Error\nИсправление некоторых ошибок \nДобавлена команда kill(BETA)\nОбновление дизайна\тНовая команда github\n--Версия ' + version + '--')
+                    t2('--Обновление--\nОптимизация размера кода\nНовая команда update\nОбновлено сообщение Error\nИсправление некоторых ошибок \nДобавлена команда kill(BETA)\nОбновление дизайна\тНовая команда github\n--Версия ' + version + '--')
                 elif cmd == 'kill':
                     kill()
+                elif cmd == 'v':
+                    t2(str(version))
+                elif cmd == 'modules':
+                    t2(Fore.GREEN + '-- Modules --\n$ -- requests\n$ -- random\n$ -- os\n$ -- webbrowser'+ Fore.RED + '\n$ -- colorama' + Fore.GREEN + '\n$ -- Json')
                 else:
-                    t2('Error [' + Fore.RED + '!' + Fore.BLUE + '] ' + Fore.RED + ' Вы ввели недопустимую команду!' + Fore.BLUE + '[' + Fore.RED +str(cmd) + Fore.BLUE + ']')
+                    t2('Error [' + Fore.RED + '$' + Fore.BLUE + '] ' + Fore.RED + ' Вы ввели недопустимую команду!' + Fore.BLUE + '[' + Fore.RED +str(cmd) + Fore.BLUE + ']')
+            
         else:
             t2('Error: Отказано в доступе')
     else:
